@@ -1,9 +1,5 @@
-<template>
-
-</template>
+<template>헤더 화면입니다.</template>
 
 <script>
-    export default {
-
-    }
+export default {};
 </script>

@@ -8,3 +8,5 @@ const app = createApp(App);
 app.use(router);
 app.use(vuetify);
 app.mount("#app");
+
+// 라우터와 뷰티파이 쓰겠다는 설정.

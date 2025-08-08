@@ -8,9 +8,8 @@
 </template>
 
 <script>
+import HeaderComponent from "./components/HeaderComponent.vue";
 export default {
-  import HeaderComponent from './components/HeaderComponent.vue';
-
   components: {
     HeaderComponent,
   },
