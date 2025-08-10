@@ -1,5 +1,47 @@
-<template>회원가입 화면입니다.</template>
+<template>
+  <v-container>
+    <v-row justify="center">
+      <v-col md="6">
+        <v-card>
+          <v-card-title class="text-h5 text-center"> 회원가입 </v-card-title>
+          <v-card-text>
+            <v-form>
+              <v-text-field label="email" v-model="email"> </v-text-field>
+              <!-- v-model 변수설정 -->
+              <v-text-field label="password" v-model="password"> </v-text-field>
+
+              <v-btn type="text" color="primary" block @click="memberCreate()"
+                >등록</v-btn
+              >
+            </v-form>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
 
 <script>
-export default {};
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    async memberCreate() {
+      const registerData = {
+        email: this.email,
+        password: this.password,
+      };
+      // {"email" : "hongildong"}
+
+      await axios.post("http://localhost:8080/member/create", registerData);
+      window.location.href = "/";
+    },
+  },
+};
 </script>
