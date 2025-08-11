@@ -11,7 +11,7 @@
               <v-text-field label="password" v-model="password" type="password">
               </v-text-field>
 
-              <v-btn type="text" color="primary" block @click="memberCreate()"
+              <v-btn type="button" color="primary" block @click="memberCreate()"
                 >등록</v-btn
               >
             </v-form>

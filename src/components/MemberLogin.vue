@@ -8,12 +8,30 @@
             <v-form>
               <v-text-field label="email" v-model="email"> </v-text-field>
               <!-- v-model 변수설정 -->
-              <v-text-field label="password" v-model="password" type="password"> </v-text-field>
+              <v-text-field label="password" v-model="password" type="password">
+              </v-text-field>
 
-              <v-btn type="text" color="primary" block @click="memberLogin()"
+              <v-btn type="button" color="primary" block @click="memberLogin()"
                 >로그인</v-btn
               >
             </v-form>
+            <br />
+            <v-row>
+              <v-col cols="6" class="d-flex justify-center">
+                <img
+                  src="@/assets/google_login.png"
+                  style="max-height: 40px; width: auto"
+                  @click="googleLogin()"
+                />
+              </v-col>
+              <v-col cols="6" class="d-flex justify-center">
+                <img
+                  src="@/assets/kakao_login.png"
+                  style="max-height: 40px; width: auto"
+                  @click="kakaoLogin()"
+                />
+              </v-col>
+            </v-row>
           </v-card-text>
         </v-card>
       </v-col>
@@ -47,6 +65,9 @@ export default {
       localStorage.setItem("token", token);
       window.location.href = "/";
     },
+
+    googleLogin() {},
+    kakaoLogin() {},
   },
 };
 </script>
