@@ -8,7 +8,8 @@
             <v-form>
               <v-text-field label="email" v-model="email"> </v-text-field>
               <!-- v-model 변수설정 -->
-              <v-text-field label="password" v-model="password"> </v-text-field>
+              <v-text-field label="password" v-model="password" type="password">
+              </v-text-field>
 
               <v-btn type="text" color="primary" block @click="memberCreate()"
                 >등록</v-btn
